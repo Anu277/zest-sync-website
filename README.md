@@ -28,7 +28,6 @@ This Next.js website showcases:
 - **Styling:** Tailwind CSS
 - **UI Components:** shadcn/ui
 - **Language:** TypeScript
-- **Deployment:** Vercel (recommended)
 
 ## 📦 Installation & Development
 

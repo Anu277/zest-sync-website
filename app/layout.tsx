@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     template: "%s | Zest Sync Player"
   },
   description:
-    "Revolutionary offline video player with AI-powered subtitle generation, multi-language translation, and offline video processing. Supports 14 languages with Whisper AI and Helsinki MarianMT models.",
+    "AI-powered video player with smart subtitle generation, real-time translation, and multi-language support. Features Whisper AI and Helsinki MarianMT models for 14+ languages.",
   keywords: [
     "video player", "AI subtitles", "offline player", "subtitle generator", 
     "video translation", "Whisper AI", "MarianMT", "smart player", 
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://zest-sync-player.vercel.app"),
+  metadataBase: new URL("https://zest-sync.netlify.app"),
   alternates: {
     canonical: "/",
   },
@@ -50,12 +50,12 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Zest Sync Player - AI-Powered Video Player with Smart Subtitles",
-    description: "Revolutionary offline video player with AI-powered subtitle generation and multi-language translation. Supports 14 languages.",
-    url: "https://zest-sync-player.vercel.app",
+    description: "AI-powered video player with smart subtitle generation and real-time multi-language translation. Supports 14+ languages.",
+    url: "https://zestsync.netlify.app",
     siteName: "Zest Sync Player",
     images: [
       {
-        url: "/assets/images/logo.png",
+        url: "/logo.png",
         width: 1200,
         height: 1200,
         alt: "Zest Sync Player - AI-Powered Video Player Logo",
@@ -65,16 +65,30 @@ export const metadata: Metadata = {
     type: "website",
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title: "Zest Sync Player - AI-Powered Video Player",
-    description: "Revolutionary offline video player with AI subtitle generation and multi-language translation",
-    images: ["/assets/images/logo.png"],
-    creator: "@anub0709",
+    description: "AI-powered video player with smart subtitle generation and real-time multi-language translation",
+    images: ["/logo.png"],
+    creator: "@anu_b_277",
+  },
+  icons: {
+    icon: "/icon.ico",
+    shortcut: "/icon.ico",
+    apple: "/icon.ico",
   },
   verification: {
     google: "0JdHd_p6bt9Tf9cXiYhWjMzq7XUMvez9zzb8pMBKa5Y",
   },
   category: "technology",
+  other: {
+    // WhatsApp sharing
+    "og:image:width": "1200",
+    "og:image:height": "1200",
+    // Telegram sharing
+    "telegram:channel": "@zestsyncplayer",
+    // Instagram (uses OpenGraph)
+    "article:author": "https://instagram.com/anurag_bheemani",
+  },
 }
 
 export default function RootLayout({
