@@ -72,7 +72,7 @@ export const metadata: Metadata = {
     creator: "@anub0709",
   },
   verification: {
-    google: "your-google-verification-code",
+    google: "0JdHd_p6bt9Tf9cXiYhWjMzq7XUMvez9zzb8pMBKa5Y",
   },
   category: "technology",
 }
