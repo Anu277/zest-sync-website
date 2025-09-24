@@ -24,7 +24,7 @@ export function InstallationSection() {
             <Button 
               size="lg" 
               className="px-8 py-4 text-lg font-bold"
-              onClick={() => window.open('https://github.com/Anu277/Zest-Sync-Player/releases/download/v2.1.0/ZestSyncPlayerSetup.exe', '_blank')}
+              onClick={() => window.open('https://github.com/Anu277/Zest-Sync-Player/releases/download/v2.1.0/ZestSyncPlayer-v2.1.0-CPU-Setup.exe', '_blank')}
             >
               <Download className="w-6 h-6 mr-3" />
               Download CPU v2.1.0
