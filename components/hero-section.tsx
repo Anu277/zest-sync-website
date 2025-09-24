@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Play, Download, Github, AppWindow } from "lucide-react"
 import Image from "next/image"
-import logo from "@/assets/images/logo trans.png"
+import logo from "@/assets/images/logo_900_t.webp"
 import win11 from "../assets/images/win11.png"
 import { useState, useEffect, useRef } from "react"
 import { DownloadCounter } from "@/components/download-counter"
@@ -26,7 +26,7 @@ export function HeroSection() {
 
     const startTime = performance.now()
     const isMdOrLarger = window.matchMedia('(min-width: 768px)').matches
-    const duration = isMdOrLarger ? 140000 : 8000 // 140s for md+, 8s for smaller
+    const duration = isMdOrLarger ? 140000 : 8000
     
     const animate = (currentTime) => {
       const elapsed = currentTime - startTime
@@ -34,10 +34,8 @@ export function HeroSection() {
       
       let value
       if (progress <= 0.5) {
-        // First half: 300 to 1000
         value = 300 + (progress * 2) * 700
       } else {
-        // Second half: 1000 to 300
         value = 1000 - ((progress - 0.5) * 2) * 700
       }
       
@@ -63,7 +61,7 @@ export function HeroSection() {
       <div 
         className="absolute inset-0 bg-gradient-to-br from-background via-background"
         style={{
-          background: `linear-gradient(to bottom right, #121212, #121212, rgba(229, 9, 20, ${(10 + (intensity / 10) * 0.5) / 100}))`
+          background: `linear-gradient(135deg, #121212 0%, #121212 70%, rgba(229, 9, 20, ${(10 + (intensity / 10) * 0.5) / 100}) 100%)`
         }} 
       />
 
@@ -101,29 +99,7 @@ export function HeroSection() {
           <DownloadCounter />
         </div>
 
-        
-      {/* Theme Intensity Range Slider */}
-      <div className=" -bottom-15 sm:-bottom-15 md:-bottom-15 left-0 right-0 px-4 pb-10">
-        <div className="max-w-6xl mx-auto">
-          <div className="relative">
-            <input
-              type="range"
-              min="0"
-              max="1000"
-              value={intensity}
-              onChange={handleIntensityChange}
-              className="w-full h-2 bg-gray-700 rounded-full appearance-none cursor-pointer slider-thumb relative z-20"
-            />
-            <div 
-              className="absolute top-0 left-0 h-2 bg-gradient-to-r from-primary via-secondary to-accent rounded-full pointer-events-none z-10 slider-bar-animate"
-              style={{width: `${intensity / 10}%`}}
-            />
-          </div>
-          {/* <div className="text-xs mt-2 text-center text-zinc-800">
-            Theme Intensity: {intensity}%
-          </div> */}
-        </div>
-      </div>
+
 
         {/* Action buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

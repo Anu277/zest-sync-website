@@ -8,9 +8,9 @@ export function FutureUpdates() {
       icon: Zap,
       title: "CUDA GPU Acceleration",
       description: "Hardware-accelerated media processing using NVIDIA CUDA for lightning-fast subtitle generation",
-      status: "In Development",
+      status: "Completed",
       priority: "High",
-      benefits: ["10x faster processing", "Reduced CPU usage", "Better performance"]
+      benefits: ["5-10x faster processing", "Reduced CPU usage", "Better performance"]
     },
     {
       icon: Layers,
@@ -40,8 +40,9 @@ export function FutureUpdates() {
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case "In Development": return "bg-green-500/20 text-green-400 border-green-500/30"
-      case "Planned": return "bg-blue-500/20 text-blue-400 border-blue-500/30"
+      case "Completed": return "bg-green-500/20 text-green-400 border-green-500/30"
+      case "In Development": return "bg-blue-500/20 text-blue-400 border-blue-500/30"
+      case "Planned": return "bg-purple-500/20 text-purple-400 border-purple-500/30"
       case "Research Phase": return "bg-yellow-500/20 text-yellow-400 border-yellow-500/30"
       default: return "bg-gray-500/20 text-gray-400 border-gray-500/30"
     }
@@ -71,14 +72,14 @@ export function FutureUpdates() {
 
         <div className="grid md:grid-cols-2 gap-6 mb-12">
           {upcomingFeatures.map((feature, index) => (
-            <Card key={index} className="glass glass-hover p-6 relative overflow-hidden group">
+            <Card key={index} className={`glass glass-hover p-6 relative overflow-hidden group ${feature.status === 'Completed' ? 'bg-green-500/10 border-green-500/30' : ''}`}>
               <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
               
               <div className="relative z-10">
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex items-center gap-3">
-                    <div className="p-3 bg-primary/10 rounded-lg">
-                      <feature.icon className="w-6 h-6 text-primary" />
+                    <div className={`p-3 rounded-lg ${feature.status === 'Completed' ? 'bg-green-500/20' : 'bg-primary/10'}`}>
+                      <feature.icon className={`w-6 h-6 ${feature.status === 'Completed' ? 'text-green-400' : 'text-primary'}`} />
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold mb-1">{feature.title}</h3>
@@ -99,11 +100,11 @@ export function FutureUpdates() {
                 </p>
 
                 <div className="space-y-2">
-                  <h4 className="text-sm font-semibold text-primary">Key Benefits:</h4>
+                  <h4 className={`text-sm font-semibold ${feature.status === 'Completed' ? 'text-green-400' : 'text-primary'}`}>Key Benefits:</h4>
                   <ul className="space-y-1">
                     {feature.benefits.map((benefit, idx) => (
                       <li key={idx} className="text-sm text-muted-foreground flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                        <div className={`w-1.5 h-1.5 rounded-full ${feature.status === 'Completed' ? 'bg-green-400' : 'bg-primary'}`}></div>
                         {benefit}
                       </li>
                     ))}
@@ -128,7 +129,7 @@ export function FutureUpdates() {
               </div>
               <h4 className="font-semibold mb-2">GPU Acceleration</h4>
               <p className="text-sm text-muted-foreground">
-                CUDA-powered processing for 10x performance boost on compatible hardware
+                Already available! CUDA-powered processing for 5-10x performance boost (Zest Sync G v2.1.0)
               </p>
             </div>
 

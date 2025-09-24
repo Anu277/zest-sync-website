@@ -1,0 +1,180 @@
+{
+  "project": {
+    "name": "Zest Sync Player",
+    "description": "AI-Powered Video Player with Automatic Subtitle Generation & Translation",
+    "repository": "https://github.com/anu277/zest-sync-player",
+    "license": "MIT"
+  },
+  "version_tree": {
+    "current_version": "2.1.0",
+    "branches": [
+      {
+        "name": "main",
+        "type": "stable",
+        "versions": [
+          {
+            "version": "2.1.0",
+            "tag": "v2.1.0",
+            "release_date": "2025-01-19",
+            "status": "latest",
+            "type": "major",
+            "title": "GPU Acceleration & Enhanced UI",
+            "commit_hash": "a695957",
+            "commit_message": "Release v2.1.0: Add GPU support with Zest Sync G variant, enhanced UI, and bug fixes",
+            "expandable_details": {
+              "summary": "Major update introducing GPU acceleration for 5-10x faster subtitle generation with enhanced UI improvements.",
+              "new_features": [
+                "🚀 Zest Sync G - GPU-accelerated version with CUDA support",
+                "📱 Responsive UI design with adaptive sizing",
+                "⚙️ Scrollable settings panel with better organization", 
+                "🎨 Font color customization (7 colors: Black, Blue, Green, Orange, Red, White, Yellow)",
+                "✨ Text stroke toggle for improved subtitle readability",
+                "📊 Real-time progress indicators with toast notifications",
+                "🔄 Enhanced system info detection and performance logging"
+              ],
+              "improvements": [
+                "🔧 Better model path handling for EXE compatibility",
+                "💾 Enhanced memory management for translation models",
+                "⚡ VRAM optimization for GPU processing",
+                "🎯 Visual queue indicators for playing media",
+                "📈 Performance estimation accuracy improvements"
+              ],
+              "bug_fixes": [
+                "🐛 Fixed memory leaks during long processing sessions",
+                "🔧 Resolved UI responsiveness issues during subtitle generation",
+                "💾 Fixed settings persistence across app restarts",
+                "🎮 Improved FFmpeg detection with multiple fallback paths"
+              ],
+              "performance": {
+                "cpu_version": "~1.4 min per 10-min video (Fast mode)",
+                "gpu_version": "~18 sec per 2.35-min video (5-7x faster)",
+                "memory_usage": "CPU: ~600MB, GPU: ~2.3GB VRAM peak"
+              },
+              "downloads": [
+                {
+                  "name": "Zest Sync Player (CPU)",
+                  "platform": "Windows 10/11",
+                  "size": "~150MB",
+                  "requirements": "4GB RAM minimum"
+                },
+                {
+                  "name": "Zest Sync G (GPU)",
+                  "platform": "Windows 10/11 + CUDA 12.8",
+                  "size": "~180MB", 
+                  "requirements": "NVIDIA GPU (GTX 1050+), 4GB VRAM"
+                }
+              ]
+            }
+          },
+          {
+            "version": "2.0.0",
+            "tag": "v2.0",
+            "release_date": "2025-01-15",
+            "status": "stable",
+            "type": "major",
+            "title": "Complete Rewrite with Modern UI",
+            "commit_hash": "0dcf805",
+            "commit_message": "Update main.py: Improve model path handling and memory management",
+            "expandable_details": {
+              "summary": "Complete application rewrite with PyQt6, introducing AI-powered subtitle generation and modern interface.",
+              "new_features": [
+                "🎯 Dual Accuracy Modes (Fast/Slow) for speed vs quality optimization",
+                "🎓 Interactive Tutorial system for first-time users",
+                "🤖 AI-powered subtitle generation using faster-whisper",
+                "🌍 Multi-language translation support (14 languages)",
+                "🎨 Modern dark interface with smooth animations",
+                "📂 Queue management with drag-drop and auto-play",
+                "📊 Real-time progress display during subtitle generation"
+              ],
+              "technical_changes": [
+                "🔄 Complete rewrite from VLC-based to PyQt6 framework",
+                "⚡ Faster-whisper integration for improved performance",
+                "🧠 Helsinki-NLP models for translation",
+                "💾 Enhanced memory management and cleanup",
+                "🔧 Better error handling and logging system"
+              ],
+              "ui_improvements": [
+                "🌙 Modern dark theme interface",
+                "📱 Responsive design elements",
+                "🎛️ Full media controls (speed, volume, fullscreen)",
+                "⌨️ Keyboard shortcuts (K, J/L, U/I, F)",
+                "🖱️ Mouse wheel volume control"
+              ],
+              "performance": {
+                "transcription": "~1.4 minutes per 10-minute video",
+                "translation": "~1.2-4 minutes depending on language",
+                "memory_usage": "~600MB during processing"
+              }
+            }
+          },
+          {
+            "version": "1.0.0",
+            "tag": "v1.0.0",
+            "release_date": "2024-12-01",
+            "status": "legacy",
+            "type": "initial",
+            "title": "Initial Release",
+            "commit_hash": "initial",
+            "commit_message": "Initial release with VLC integration and background subtitle generation",
+            "expandable_details": {
+              "summary": "First release featuring VLC integration with background subtitle generation using OpenAI Whisper.",
+              "features": [
+                "🎬 VLC media player integration",
+                "🔌 ZSLoader extension for VLC",
+                "🤖 OpenAI Whisper for speech recognition",
+                "⚙️ Background processing system",
+                "🚀 Windows startup integration",
+                "📁 Automatic subtitle file management"
+              ],
+              "architecture": [
+                "🔧 VLC-based media playback",
+                "🐍 Python backend processing",
+                "📡 Extension-based communication",
+                "💾 Local file processing"
+              ],
+              "limitations": [
+                "⚠️ Required VLC media player installation",
+                "🔄 Limited UI customization options",
+                "📱 Basic interface design",
+                "🌐 Single language support initially"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "changelog_timeline": [
+    {
+      "date": "2025-01-19",
+      "version": "2.1.0",
+      "changes": [
+        "Add documentation link to README for better visibility",
+        "Update README with v2.1.0 features and refresh icon",
+        "Release v2.1.0: Add GPU support with Zest Sync G variant, enhanced UI, and bug fixes"
+      ]
+    },
+    {
+      "date": "2025-01-15", 
+      "version": "2.0.0",
+      "changes": [
+        "Update main.py: Improve model path handling and memory management",
+        "Add Git clone commands for Whisper models in README and include new project files",
+        "Update .gitignore to exclude large files (>100MB GitHub limit)",
+        "Update README: Fix models path and add GitHub releases link",
+        "Add project icon and update README with GitHub repository links",
+        "Initial commit: Zest Sync Player v2.0 - AI-powered video player with automatic subtitle generation"
+      ]
+    },
+    {
+      "date": "2024-12-01",
+      "version": "1.0.0", 
+      "changes": [
+        "Initial release with VLC integration",
+        "Background subtitle generation system",
+        "OpenAI Whisper integration",
+        "Windows startup integration"
+      ]
+    }
+  ]
+}

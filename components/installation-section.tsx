@@ -21,21 +21,26 @@ export function InstallationSection() {
 
         <div className="text-center mb-12">
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <div className="relative">
-              <div className="absolute -inset-2 bg-gradient-to-r from-primary via-secondary to-accent rounded-lg blur opacity-30 animate-pulse"></div>
-              <Button 
-                size="lg" 
-                className="relative neon-glow px-8 py-4 text-lg font-bold bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary transition-all duration-300 transform hover:scale-105 shadow-2xl"
-                onClick={() => window.open('https://github.com/Anu277/Zest-Sync-Player/releases/download/v2.0/ZestSyncPlayerSetup.exe', '_blank')}
-              >
-                <Download className="w-6 h-6 mr-3 animate-bounce" />
-                Direct Download
-              </Button>
-            </div>
+            <Button 
+              size="lg" 
+              className="px-8 py-4 text-lg font-bold"
+              onClick={() => window.open('https://github.com/Anu277/Zest-Sync-Player/releases/download/v2.1.0/ZestSyncPlayerSetup.exe', '_blank')}
+            >
+              <Download className="w-6 h-6 mr-3" />
+              Download CPU v2.1.0
+            </Button>
+            <Button 
+              size="lg" 
+              className="px-8 py-4 text-lg font-bold bg-orange-600 hover:bg-orange-700"
+              onClick={() => window.open('https://github.com/Anu277/Zest-Sync-Player/releases/download/v2.1.0/ZestSyncGSetup.exe', '_blank')}
+            >
+              <Download className="w-6 h-6 mr-3" />
+              GPU v2.1.0 (COMING SOON)
+            </Button>
             <Button 
               variant="outline" 
               size="lg" 
-              className="glass glass-hover px-8 py-4 text-lg font-semibold border-primary/30 hover:border-primary bg-transparent"
+              className="px-8 py-4 text-lg font-semibold"
               onClick={() => window.open('https://github.com/anu277/zest-sync-player/releases', '_blank')}
             >
               <Github className="w-6 h-6 mr-3" />
@@ -52,12 +57,12 @@ export function InstallationSection() {
               <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Download className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="text-2xl font-bold mb-2">Normal Windows Setup</h3>
-              <p className="text-muted-foreground">Standard CPU processing installation</p>
+              <h3 className="text-2xl font-bold mb-2">Zest Sync Player (CPU Version)</h3>
+              <p className="text-muted-foreground">Standard CPU processing - works on all devices</p>
             </div>
 
             <Button size="lg" className="neon-glow mb-6 w-full">
-              Windows - Primary Installer
+              Zest Sync Player v2.1.0 - CPU
             </Button>
 
             <div className="space-y-4">
@@ -114,13 +119,13 @@ export function InstallationSection() {
               <div className="w-16 h-16 bg-orange-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Zap className="w-8 h-8 text-orange-500" />
               </div>
-              <h3 className="text-2xl font-bold mb-2 text-orange-400">Windows Setup with CUDA</h3>
-              <p className="text-muted-foreground">GPU-accelerated for 10x faster processing</p>
+              <h3 className="text-2xl font-bold mb-2 text-orange-400">Zest Sync G (GPU Version)</h3>
+              <p className="text-muted-foreground">GPU-accelerated for 5-10x faster processing</p>
             </div>
 
             <Button size="lg" className="bg-orange-600 hover:bg-orange-700 mb-6 w-full flex items-center gap-2">
               <Zap className="w-5 h-5" />
-              CUDA Enhanced Version
+              Zest Sync G v2.1.0 - GPU
             </Button>
 
             <div className="space-y-4">
@@ -144,7 +149,7 @@ export function InstallationSection() {
                 <span className="w-6 h-6 bg-orange-500 text-white rounded-full flex items-center justify-center text-sm font-bold">3</span>
                 <div>
                   <h4 className="font-semibold">Download CUDA</h4>
-                  <p className="text-sm text-muted-foreground">CUDA 11.8 from NVIDIA official site</p>
+                  <p className="text-sm text-muted-foreground">CUDA 12.8 from NVIDIA official site</p>
                 </div>
               </div>
               
@@ -159,7 +164,7 @@ export function InstallationSection() {
               <div className="flex items-center gap-3 p-3 bg-orange-500/10 rounded-lg">
                 <span className="w-6 h-6 bg-orange-500 text-white rounded-full flex items-center justify-center text-sm font-bold">5</span>
                 <div>
-                  <h4 className="font-semibold">Enjoy 10x faster speed</h4>
+                  <h4 className="font-semibold">Enjoy 5-10x faster speed</h4>
                   <p className="text-sm text-muted-foreground">GPU-accelerated subtitle generation</p>
                 </div>
               </div>
@@ -170,9 +175,9 @@ export function InstallationSection() {
                 <AlertTriangle className="w-4 h-4 text-yellow-400" />
                 <p className="text-sm text-yellow-400">Requires NVIDIA GPU with CUDA support</p>
               </div>
-              <Button variant="outline" size="sm" className="w-full flex items-center gap-2" onClick={() => window.open('https://developer.nvidia.com/cuda-11-8-0-download-archive', '_blank')}>
+              <Button variant="outline" size="sm" className="w-full flex items-center gap-2" onClick={() => window.open('https://developer.nvidia.com/cuda-12-8-0-download-archive', '_blank')}>
                 <Download className="w-4 h-4" />
-                Download CUDA 11.8 from NVIDIA
+                Download CUDA 12.8 from NVIDIA
               </Button>
             </div>
           </Card>

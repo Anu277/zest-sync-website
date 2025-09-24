@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     siteName: "Zest Sync Player",
     images: [
       {
-        url: "/logo.png",
+        url: "/logo_900.webp",
         width: 1200,
         height: 1200,
         alt: "Zest Sync Player - AI-Powered Video Player Logo",
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     card: "summary",
     title: "Zest Sync Player - AI-Powered Video Player",
     description: "AI-powered video player with smart subtitle generation and real-time multi-language translation",
-    images: ["/logo.png"],
+    images: ["/logo_900.webp"],
     creator: "@anu_b_277",
   },
   icons: {

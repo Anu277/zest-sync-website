@@ -9,6 +9,7 @@ import { SystemRequirements } from "@/components/system-requirements"
 import { CommunitySection } from "@/components/community-section"
 import { CreditsSection } from "@/components/credits-section"
 import { FutureUpdates } from "@/components/future-updates"
+import { VersionTree } from "@/components/version-tree"
 import { ContactForm } from "@/components/contact-form"
 import { Footer } from "@/components/footer"
 import { AnimatedBackground } from "@/components/animated-background"
@@ -27,6 +28,7 @@ export default function HomePage() {
         <InstallationSection />
         <SystemRequirements />
         <FutureUpdates />
+        <VersionTree />
         <CommunitySection />
         <CreditsSection />
         <ContactForm />

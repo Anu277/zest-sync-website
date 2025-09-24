@@ -42,43 +42,60 @@ export function HowItWorks() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-5 gap-6 md:gap-6 gap-y-16 md:gap-y-6">
-          {steps.map((step, index) => (
-            <div key={index} className="relative">
-              <Card className="glass glass-hover p-6 text-center h-full">
-                <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4 neon-glow">
-                  <step.icon className="w-8 h-8 text-primary" />
-                </div>
-                <h3 className="text-lg font-semibold mb-3">{step.title}</h3>
-                <p className="text-sm text-muted-foreground">{step.description}</p>
-              </Card>
+        {/* Desktop Layout */}
+        <div className="hidden md:block relative">
+          {/* Main connecting line */}
+          <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-primary via-secondary to-accent transform -translate-y-1/2 z-0"></div>
+          
+          <div className="grid md:grid-cols-5 gap-8 relative z-10">
+            {steps.map((step, index) => (
+              <div key={index} className="relative">
+                {/* Connecting node */}
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-primary rounded-full border-4 border-background z-20"></div>
+                
+                <Card className="glass glass-hover p-6 text-center mt-12">
+                  <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4 neon-glow">
+                    <step.icon className="w-8 h-8 text-primary" />
+                  </div>
+                  <h3 className="text-lg font-semibold mb-3">{step.title}</h3>
+                  <p className="text-sm text-muted-foreground">{step.description}</p>
+                </Card>
 
-              {/* Arrow connectors */}
-              {index < steps.length - 1 && (
-                <>
-                  {/* Desktop horizontal arrow */}
-                  <div className="hidden md:flex absolute top-1/2 -right-8 transform -translate-y-1/2 z-10 items-center">
-                    <div className="w-8 h-px bg-gradient-to-r from-primary to-secondary mr-1"></div>
-                    <ArrowRight className="w-4 h-4 text-secondary" />
+                {/* Branch lines */}
+                {/* <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 w-0.5 h-12 bg-primary/50 z-10"></div> */}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Mobile Layout */}
+        <div className="md:hidden relative">
+          {/* Vertical connecting line */}
+          <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-secondary to-accent z-0"></div>
+          
+          <div className="space-y-8 relative z-10">
+            {steps.map((step, index) => (
+              <div key={index} className="relative flex items-center">
+                {/* Node */}
+                <div className="absolute left-6 w-4 h-4 bg-primary rounded-full border-4 border-background z-20"></div>
+                
+                {/* Branch line */}
+                <div className="absolute left-8 w-8 h-0.5 bg-primary/50 z-10"></div>
+                
+                <Card className="glass glass-hover p-6 ml-16 flex-1">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center neon-glow flex-shrink-0">
+                      <step.icon className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold mb-2">{step.title}</h3>
+                      <p className="text-sm text-muted-foreground">{step.description}</p>
+                    </div>
                   </div>
-                  
-                  {/* Mobile vertical arrow with curved line */}
-                  <div className="md:hidden flex flex-col items-center absolute -bottom-8 left-1/2 transform -translate-x-1/2 z-10">
-                    <svg width="2" height="20" className="mb-1">
-                      <path d="M1,0 Q1,10 1,20" stroke="url(#gradient)" strokeWidth="2" fill="none" />
-                      <defs>
-                        <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                          <stop offset="0%" stopColor="#e50914" />
-                          <stop offset="100%" stopColor="#f61a27" />
-                        </linearGradient>
-                      </defs>
-                    </svg>
-                    <ArrowDown className="w-4 h-4 text-secondary" />
-                  </div>
-                </>
-              )}
-            </div>
-          ))}
+                </Card>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
