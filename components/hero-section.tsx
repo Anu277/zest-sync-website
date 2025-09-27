@@ -114,7 +114,7 @@ export function HeroSection() {
             }}
           >
             <Image src={win11} alt="Logo" width={20} height={20} className="mr-2 hue-rotate-30 invert" />
-            Download Now
+            Download Now (win 10/11)
           </Button>
           <Button
             variant="outline"
